@@ -1,0 +1,484 @@
+options:
+  parameters:
+    author: ''
+    catch_exceptions: 'True'
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: Practica_1
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: Practica 1
+    window_size: (1000,1000)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 8]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: '32000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [184, 12]
+    rotation: 0
+    state: enabled
+- name: DESVIACION_EST
+  id: qtgui_number_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    autoscale: 'False'
+    avg: '0'
+    color1: ("black", "black")
+    color10: ("black", "black")
+    color2: ("black", "black")
+    color3: ("black", "black")
+    color4: ("black", "black")
+    color5: ("black", "black")
+    color6: ("black", "black")
+    color7: ("black", "black")
+    color8: ("black", "black")
+    color9: ("black", "black")
+    comment: ''
+    factor1: '1'
+    factor10: '1'
+    factor2: '1'
+    factor3: '1'
+    factor4: '1'
+    factor5: '1'
+    factor6: '1'
+    factor7: '1'
+    factor8: '1'
+    factor9: '1'
+    graph_type: qtgui.NUM_GRAPH_HORIZ
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    max: '1'
+    min: '-1'
+    name: '"DESVIACION ESTANDAR"'
+    nconnections: '1'
+    type: float
+    unit1: ''
+    unit10: ''
+    unit2: ''
+    unit3: ''
+    unit4: ''
+    unit5: ''
+    unit6: ''
+    unit7: ''
+    unit8: ''
+    unit9: ''
+    update_time: '0.10'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [752, 532.0]
+    rotation: 0
+    state: true
+- name: MEDIA
+  id: qtgui_number_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    autoscale: 'False'
+    avg: '0'
+    color1: ("black", "black")
+    color10: ("black", "black")
+    color2: ("black", "black")
+    color3: ("black", "black")
+    color4: ("black", "black")
+    color5: ("black", "black")
+    color6: ("black", "black")
+    color7: ("black", "black")
+    color8: ("black", "black")
+    color9: ("black", "black")
+    comment: ''
+    factor1: '1'
+    factor10: '1'
+    factor2: '1'
+    factor3: '1'
+    factor4: '1'
+    factor5: '1'
+    factor6: '1'
+    factor7: '1'
+    factor8: '1'
+    factor9: '1'
+    graph_type: qtgui.NUM_GRAPH_HORIZ
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    max: '1'
+    min: '-1'
+    name: '"MEDIA"'
+    nconnections: '1'
+    type: float
+    unit1: ''
+    unit10: ''
+    unit2: ''
+    unit3: ''
+    unit4: ''
+    unit5: ''
+    unit6: ''
+    unit7: ''
+    unit8: ''
+    unit9: ''
+    update_time: '0.10'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [752, 68.0]
+    rotation: 0
+    state: true
+- name: MEDIA_CUADRATICA
+  id: qtgui_number_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    autoscale: 'False'
+    avg: '0'
+    color1: ("black", "black")
+    color10: ("black", "black")
+    color2: ("black", "black")
+    color3: ("black", "black")
+    color4: ("black", "black")
+    color5: ("black", "black")
+    color6: ("black", "black")
+    color7: ("black", "black")
+    color8: ("black", "black")
+    color9: ("black", "black")
+    comment: ''
+    factor1: '1'
+    factor10: '1'
+    factor2: '1'
+    factor3: '1'
+    factor4: '1'
+    factor5: '1'
+    factor6: '1'
+    factor7: '1'
+    factor8: '1'
+    factor9: '1'
+    graph_type: qtgui.NUM_GRAPH_HORIZ
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    max: '1'
+    min: '-1'
+    name: '"MEDIA CUADRATICA"'
+    nconnections: '1'
+    type: float
+    unit1: ''
+    unit10: ''
+    unit2: ''
+    unit3: ''
+    unit4: ''
+    unit5: ''
+    unit6: ''
+    unit7: ''
+    unit8: ''
+    unit9: ''
+    update_time: '0.10'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [752, 180.0]
+    rotation: 0
+    state: true
+- name: POTENCIA_PROMEDIO
+  id: qtgui_number_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    autoscale: 'False'
+    avg: '0'
+    color1: ("black", "black")
+    color10: ("black", "black")
+    color2: ("black", "black")
+    color3: ("black", "black")
+    color4: ("black", "black")
+    color5: ("black", "black")
+    color6: ("black", "black")
+    color7: ("black", "black")
+    color8: ("black", "black")
+    color9: ("black", "black")
+    comment: ''
+    factor1: '1'
+    factor10: '1'
+    factor2: '1'
+    factor3: '1'
+    factor4: '1'
+    factor5: '1'
+    factor6: '1'
+    factor7: '1'
+    factor8: '1'
+    factor9: '1'
+    graph_type: qtgui.NUM_GRAPH_HORIZ
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    max: '1'
+    min: '-1'
+    name: '"POTENCIA PROMEDIO"'
+    nconnections: '1'
+    type: float
+    unit1: ''
+    unit10: ''
+    unit2: ''
+    unit3: ''
+    unit4: ''
+    unit5: ''
+    unit6: ''
+    unit7: ''
+    unit8: ''
+    unit9: ''
+    update_time: '0.10'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [752, 412.0]
+    rotation: 0
+    state: true
+- name: RMS
+  id: qtgui_number_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    autoscale: 'False'
+    avg: '0'
+    color1: ("black", "black")
+    color10: ("black", "black")
+    color2: ("black", "black")
+    color3: ("black", "black")
+    color4: ("black", "black")
+    color5: ("black", "black")
+    color6: ("black", "black")
+    color7: ("black", "black")
+    color8: ("black", "black")
+    color9: ("black", "black")
+    comment: ''
+    factor1: '1'
+    factor10: '1'
+    factor2: '1'
+    factor3: '1'
+    factor4: '1'
+    factor5: '1'
+    factor6: '1'
+    factor7: '1'
+    factor8: '1'
+    factor9: '1'
+    graph_type: qtgui.NUM_GRAPH_HORIZ
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    max: '1'
+    min: '-1'
+    name: '"RMS"'
+    nconnections: '1'
+    type: float
+    unit1: ''
+    unit10: ''
+    unit2: ''
+    unit3: ''
+    unit4: ''
+    unit5: ''
+    unit6: ''
+    unit7: ''
+    unit8: ''
+    unit9: ''
+    update_time: '0.10'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [752, 300.0]
+    rotation: 0
+    state: true
+- name: blocks_vector_source_x_0
+  id: blocks_vector_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    repeat: 'True'
+    tags: '[]'
+    type: float
+    vector: (1, 2, -1)
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [200, 324.0]
+    rotation: 0
+    state: true
+- name: epy_block_0
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\n\nclass blk (gr. sync_block\
+      \ ):\n\tdef __init__ ( self ) : # only default arguments here\n\t    gr. sync_block\
+      \ . __init__ (\n    \t\tself ,\n\t\tname ='e_Acum ', # will show up in GRC\n\
+      \t\tin_sig =[ np. float32 ],\n\t\tout_sig =[ np. float32 ]\n\t\t\n\t)\n\tdef\
+      \ work (self , input_items , output_items ):\n\t\tx = input_items [0] # Senial\
+      \ de entrada .\n\t\ty0 = output_items [0] # Senial acumulada\n\t\ty0 [:] = np.\
+      \ cumsum (x)\n\t\treturn len (y0)\n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('e_Acum ', 'blk', [], [('0', 'float', 1)], [('0', 'float', 1)], '',
+      [])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [64, 112.0]
+    rotation: 0
+    state: disabled
+- name: epy_block_1
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\nclass blk (gr. sync_block\
+      \ ):\n\tdef __init__ ( self ) : # only default arguments here\n\t\tgr. sync_block\
+      \ . __init__ (\n\t\t\tself ,\n\t\t\tname ='e_Diff ', # will show up in GRC\n\
+      \t\t\tin_sig =[ np. float32 ],\n\t\t\tout_sig =[ np. float32 ]\n\t\t)\n\t\t\
+      self.acum_anterior = 0\n\t\t\n\tdef work (self , input_items , output_items\
+      \ ):\n\t\tx = input_items [0] # Senial de entrada .\n\t\ty0 = output_items [0]\
+      \ # Senial acumulada diferencial\n\t\t\n\t\tN = len (x)\n\t\tdiff = np. cumsum\
+      \ (x) - self . acum_anterior\n\t\tself . acum_anterior = diff [N -1]\n\t\ty0\
+      \ [:] = diff\n\t\treturn len (y)\n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('e_Diff ', 'blk', [], [('0', 'float', 1)], [('0', 'float', 1)], '',
+      [])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [64, 152.0]
+    rotation: 0
+    state: disabled
+- name: epy_block_2
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\nclass blk (gr. sync_block\
+      \ ):\n\n\tdef __init__ ( self ) : # only default arguments here\n\t\tgr. sync_block\
+      \ . __init__ (\n\t\t\tself ,\n\t\t\tname ='Promedios_de_tiempos ', # will show\
+      \ up in GRC\n\t\t\tin_sig =[ np. float32 ],\n\t\t\tout_sig =[ np. float32 ,np.\
+      \ float32 ,np. float32 ,np. float32 ,np. float32 ]\n\t\t)\n\t\tself . acum_anterior\
+      \ = 0\n\t\tself . Ntotales = 0\n\t\tself . acum_anterior1 = 0\n\t\tself . acum_anterior2\
+      \ = 0\n\t\t\n\tdef work (self , input_items , output_items ):\n\t\tx = input_items\
+      \ [0] # Senial de entrada .\n\t\ty0 = output_items [0] # Promedio de la senial\n\
+      \t\ty1 = output_items [1] # Media de la senial\n\t\ty2 = output_items [2] #\
+      \ RMS de la senial\n\t\ty3 = output_items [3] # Potencia promedio de la senial\n\
+      \t\ty4 = output_items [4] # Desviacion estandar de la senial\n\t\t\n\t\t# Calculo\
+      \ del promedio\n\t\tN = len (x)\n\t\tself . Ntotales = self . Ntotales + N\n\
+      \t\tacumulado = self . acum_anterior + np. cumsum (x)\n\t\tself . acum_anterior\
+      \ = acumulado [N -1]\n\t\ty0 [:]= acumulado / self . Ntotales\n\t\t\n\t\t\n\t\
+      \t# Calculo de la media cuadratica\n\t\tx2=np. multiply (x,x)\n\t\tacumulado1\
+      \ = self . acum_anterior1 + np. cumsum (x2)\n\t\tself . acum_anterior1 = acumulado\
+      \ [N -1]\n\t\ty1 [:] = acumulado1 / self . Ntotales\n\t\t\n\t\t# Calculo de\
+      \ la RMS\n\t\ty2 [:] = np. sqrt (y1)\n\t\t\n\t\t# Calculo de la potencia promedio\n\
+      \t\ty3 [:] = np. multiply (y2 ,y2)\n\t\t\n\t\t# Calculo de la desviacion estandar\n\
+      \t\tx3 = np. multiply (x-y0 ,x-y0)\n\t\tacumulado2 = self . acum_anterior2 +\
+      \ np. cumsum (x3)\n\t\tself . acum_anterior2 = acumulado2 [N -1]\n\t\ty4 [:]\
+      \ = np. sqrt ( acumulado2 / self . Ntotales )\n\t\t\n\t\treturn len (x)\n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('Promedios_de_tiempos ', 'blk', [], [('0', 'float', 1)], [('0', 'float',
+      1), ('1', 'float', 1), ('2', 'float', 1), ('3', 'float', 1), ('4', 'float',
+      1)], '', [])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [416, 280.0]
+    rotation: 0
+    state: true
+
+connections:
+- [blocks_vector_source_x_0, '0', epy_block_2, '0']
+- [epy_block_2, '0', MEDIA, '0']
+- [epy_block_2, '1', MEDIA_CUADRATICA, '0']
+- [epy_block_2, '2', RMS, '0']
+- [epy_block_2, '3', POTENCIA_PROMEDIO, '0']
+- [epy_block_2, '4', DESVIACION_EST, '0']
+
+metadata:
+  file_format: 1
+  grc_version: 3.9.8.0

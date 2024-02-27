@@ -22,6 +22,7 @@ class blk (gr. sync_block ):
 		y3 = output_items [3] # Potencia promedio de la senial
 		y4 = output_items [4] # Desviacion estandar de la senial
 		
+		
 		# Calculo del promedio
 		N = len (x)
 		self . Ntotales = self . Ntotales + N
@@ -47,5 +48,8 @@ class blk (gr. sync_block ):
 		acumulado2 = self . acum_anterior2 + np. cumsum (x3)
 		self . acum_anterior2 = acumulado2 [N -1]
 		y4 [:] = np. sqrt ( acumulado2 / self . Ntotales )
+		
+		# Señal de entrada vista en grafico
+	
 		
 		return len (x)

@@ -23,6 +23,7 @@ if __name__ == '__main__':
 from PyQt5 import Qt
 from gnuradio import qtgui
 import sip
+from gnuradio import analog
 from gnuradio import blocks
 from gnuradio import gr
 from gnuradio.filter import firdes
@@ -32,6 +33,7 @@ import signal
 from argparse import ArgumentParser
 from gnuradio.eng_arg import eng_float, intx
 from gnuradio import eng_notation
+import Practica_1_epy_block_1 as epy_block_1  # embedded python block
 import Practica_1_epy_block_2 as epy_block_2  # embedded python block
 
 
@@ -80,7 +82,10 @@ class Practica_1(gr.top_block, Qt.QWidget):
         # Blocks
         ##################################################
         self.epy_block_2 = epy_block_2.blk()
+        self.epy_block_1 = epy_block_1.blk()
         self.blocks_vector_source_x_0 = blocks.vector_source_f((1, 2, -1), True, 1, [])
+        self.blocks_add_xx_0 = blocks.add_vff(1)
+        self.analog_noise_source_x_0 = analog.noise_source_f(analog.GR_LAPLACIAN, 3, 0)
         self.RMS = qtgui.number_sink(
             gr.sizeof_float,
             0,
@@ -251,7 +256,10 @@ class Practica_1(gr.top_block, Qt.QWidget):
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.blocks_vector_source_x_0, 0), (self.epy_block_2, 0))
+        self.connect((self.analog_noise_source_x_0, 0), (self.blocks_add_xx_0, 1))
+        self.connect((self.blocks_add_xx_0, 0), (self.epy_block_1, 0))
+        self.connect((self.blocks_vector_source_x_0, 0), (self.blocks_add_xx_0, 0))
+        self.connect((self.epy_block_1, 0), (self.epy_block_2, 0))
         self.connect((self.epy_block_2, 4), (self.DESVIACION_EST, 0))
         self.connect((self.epy_block_2, 0), (self.MEDIA, 0))
         self.connect((self.epy_block_2, 1), (self.MEDIA_CUADRATICA, 0))

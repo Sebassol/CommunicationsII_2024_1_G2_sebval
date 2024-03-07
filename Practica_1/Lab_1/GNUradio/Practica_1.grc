@@ -360,6 +360,43 @@ blocks:
     coordinate: [752, 300.0]
     rotation: 0
     state: true
+- name: analog_noise_source_x_0
+  id: analog_noise_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    amp: '3'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    noise_type: analog.GR_LAPLACIAN
+    seed: '0'
+    type: float
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [24, 404.0]
+    rotation: 0
+    state: true
+- name: blocks_add_xx_0
+  id: blocks_add_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [224, 328.0]
+    rotation: 0
+    state: true
 - name: blocks_vector_source_x_0
   id: blocks_vector_source_x
   parameters:
@@ -377,9 +414,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [200, 324.0]
+    coordinate: [32, 276.0]
     rotation: 0
-    state: true
+    state: enabled
 - name: epy_block_0
   id: epy_block
   parameters:
@@ -401,7 +438,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [64, 112.0]
+    coordinate: [304, 480.0]
     rotation: 0
     state: disabled
 - name: epy_block_1
@@ -415,7 +452,7 @@ blocks:
       \ ):\n\t\tx = input_items [0] # Senial de entrada .\n\t\ty0 = output_items [0]\
       \ # Senial acumulada diferencial\n\t\t\n\t\tN = len (x)\n\t\tdiff = np. cumsum\
       \ (x) - self . acum_anterior\n\t\tself . acum_anterior = diff [N -1]\n\t\ty0\
-      \ [:] = diff\n\t\treturn len (y)\n"
+      \ [:] = diff\n\t\treturn len (y0)\n"
     affinity: ''
     alias: ''
     comment: ''
@@ -427,9 +464,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [64, 152.0]
+    coordinate: [304, 200.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: epy_block_2
   id: epy_block
   parameters:
@@ -472,7 +509,12 @@ blocks:
     state: true
 
 connections:
-- [blocks_vector_source_x_0, '0', epy_block_2, '0']
+- [analog_noise_source_x_0, '0', blocks_add_xx_0, '1']
+- [blocks_add_xx_0, '0', epy_block_0, '0']
+- [blocks_add_xx_0, '0', epy_block_1, '0']
+- [blocks_vector_source_x_0, '0', blocks_add_xx_0, '0']
+- [epy_block_0, '0', epy_block_2, '0']
+- [epy_block_1, '0', epy_block_2, '0']
 - [epy_block_2, '0', MEDIA, '0']
 - [epy_block_2, '1', MEDIA_CUADRATICA, '0']
 - [epy_block_2, '2', RMS, '0']

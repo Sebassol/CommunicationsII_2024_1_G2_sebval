@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: GPL-3.0
 #
 # GNU Radio Python Flow Graph
-# Title: constelacion16psk
+# Title: constelacion
 # Author: MANUEL_VALENTINA
 # GNU Radio version: 3.10.9.2
 
@@ -31,12 +31,12 @@ import sip
 
 
 
-class constelacion16psk(gr.top_block, Qt.QWidget):
+class constelacion(gr.top_block, Qt.QWidget):
 
     def __init__(self):
-        gr.top_block.__init__(self, "constelacion16psk", catch_exceptions=True)
+        gr.top_block.__init__(self, "constelacion", catch_exceptions=True)
         Qt.QWidget.__init__(self)
-        self.setWindowTitle("constelacion16psk")
+        self.setWindowTitle("constelacion")
         qtgui.util.check_set_qss()
         try:
             self.setWindowIcon(Qt.QIcon.fromTheme('gnuradio-grc'))
@@ -54,7 +54,7 @@ class constelacion16psk(gr.top_block, Qt.QWidget):
         self.top_grid_layout = Qt.QGridLayout()
         self.top_layout.addLayout(self.top_grid_layout)
 
-        self.settings = Qt.QSettings("GNU Radio", "constelacion16psk")
+        self.settings = Qt.QSettings("GNU Radio", "constelacion")
 
         try:
             geometry = self.settings.value("geometry")
@@ -188,7 +188,7 @@ class constelacion16psk(gr.top_block, Qt.QWidget):
 
 
     def closeEvent(self, event):
-        self.settings = Qt.QSettings("GNU Radio", "constelacion16psk")
+        self.settings = Qt.QSettings("GNU Radio", "constelacion")
         self.settings.setValue("geometry", self.saveGeometry())
         self.stop()
         self.wait()
@@ -257,7 +257,7 @@ class constelacion16psk(gr.top_block, Qt.QWidget):
 
 
 
-def main(top_block_cls=constelacion16psk, options=None):
+def main(top_block_cls=constelacion, options=None):
 
     qapp = Qt.QApplication(sys.argv)
 

@@ -37,7 +37,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: '4'
+    value: '8'
   states:
     bus_sink: false
     bus_source: false
@@ -90,7 +90,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [632, 12.0]
+    coordinate: [640, 4.0]
     rotation: 0
     state: enabled
 - name: h
@@ -455,7 +455,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1280, 316.0]
+    coordinate: [1032, 444.0]
     rotation: 0
     state: enabled
 
@@ -466,8 +466,8 @@ connections:
 - [blocks_multiply_const_vxx_0, '0', epy_block_0_0, '0']
 - [blocks_repack_bits_bb_0, '0', blocks_char_to_float_0_0_0, '0']
 - [epy_block_0_0, '0', interp_fir_filter_xxx_0, '0']
+- [epy_block_0_0, '0', qtgui_time_sink_x_1_0, '0']
 - [interp_fir_filter_xxx_0, '0', qtgui_freq_sink_x_0, '0']
-- [interp_fir_filter_xxx_0, '0', qtgui_time_sink_x_1_0, '0']
 
 metadata:
   file_format: 1

@@ -37,8 +37,10 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: (1 + 0j ,0.9239 + 0.3826j,0.7071 + 0.7071j ,0.5091 + 0.866j,-1 + 0j,-0.9239
-      - 0.3826j,-0.7071 - 0.7071j,-0.5091 - 0.866j)
+    value: (1 + 0j, 0.9239 + 0.3826j, 0.7071 + 0.7071j, 0.5091 + 0.866j,0 - 1j, -0.5091
+      + 0.866j,-0.7071 + 0.7071j, -0.9239 + 0.3826j,-1 + 0j, -0.9239 - 0.3826j,-0.7071
+      - 0.7071j, -0.5091 - 0.866j,0 + 1j, 0.5091 - 0.866j,0.7071 - 0.7071j, 0.9239
+      - 0.3826j)
   states:
     bus_sink: false
     bus_source: false
@@ -50,7 +52,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: '8'
+    value: '16'
   states:
     bus_sink: false
     bus_source: false
@@ -103,19 +105,19 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [568, 12.0]
+    coordinate: [528, 12.0]
     rotation: 0
     state: enabled
 - name: h
   id: variable
   parameters:
     comment: ''
-    value: (1,1,1,1,1,1,1,1)
+    value: (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [648, 12.0]
+    coordinate: [752, 12.0]
     rotation: 0
     state: enabled
 - name: samp_rate
@@ -240,7 +242,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1024, 408.0]
+    coordinate: [1080, 408.0]
     rotation: 0
     state: enabled
 - name: digital_chunks_to_symbols_xx_0
@@ -478,7 +480,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1248, 268.0]
+    coordinate: [1192, 260.0]
     rotation: 0
     state: enabled
 

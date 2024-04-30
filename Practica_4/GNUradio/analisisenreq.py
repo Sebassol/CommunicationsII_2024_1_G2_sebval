@@ -66,7 +66,7 @@ class analisisenreq(gr.top_block, Qt.QWidget):
         ##################################################
         # Variables
         ##################################################
-        self.M = M = 4
+        self.M = M = 8
         self.h = h = (1,1,1,1,1,1,1,1)
         self.Rb = Rb = 32000
         self.Nbps = Nbps = int(math.log(M,2))
@@ -190,8 +190,8 @@ class analisisenreq(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_multiply_const_vxx_0, 0), (self.epy_block_0_0, 0))
         self.connect((self.blocks_repack_bits_bb_0, 0), (self.blocks_char_to_float_0_0_0, 0))
         self.connect((self.epy_block_0_0, 0), (self.interp_fir_filter_xxx_0, 0))
+        self.connect((self.epy_block_0_0, 0), (self.qtgui_time_sink_x_1_0, 0))
         self.connect((self.interp_fir_filter_xxx_0, 0), (self.qtgui_freq_sink_x_0, 0))
-        self.connect((self.interp_fir_filter_xxx_0, 0), (self.qtgui_time_sink_x_1_0, 0))
 
 
     def closeEvent(self, event):

@@ -42,7 +42,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 12.0]
+    coordinate: [280, 12.0]
     rotation: 0
     state: enabled
 - name: Nbps
@@ -54,7 +54,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [408, 12.0]
+    coordinate: [360, 12.0]
     rotation: 0
     state: enabled
 - name: Rb
@@ -66,7 +66,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [248, 12.0]
+    coordinate: [200, 12.0]
     rotation: 0
     state: enabled
 - name: Rs
@@ -78,7 +78,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [488, 12.0]
+    coordinate: [440, 12.0]
     rotation: 0
     state: enabled
 - name: Sps
@@ -90,7 +90,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [640, 4.0]
+    coordinate: [560, 12.0]
     rotation: 0
     state: enabled
 - name: h
@@ -102,7 +102,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [832, 12.0]
+    coordinate: [752, 12.0]
     rotation: 0
     state: enabled
 - name: samp_rate
@@ -114,7 +114,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [720, 12.0]
+    coordinate: [640, 12.0]
     rotation: 0
     state: enabled
 - name: analog_const_source_x_1
@@ -131,7 +131,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [616, 312.0]
+    coordinate: [576, 296.0]
     rotation: 0
     state: enabled
 - name: analog_random_source_x_0
@@ -168,7 +168,24 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [448, 232.0]
+    coordinate: [408, 232.0]
+    rotation: 0
+    state: enabled
+- name: blocks_char_to_float_0_0_0_0
+  id: blocks_char_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [176, 408.0]
     rotation: 0
     state: enabled
 - name: blocks_multiply_const_vxx_0
@@ -186,7 +203,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [624, 232.0]
+    coordinate: [576, 232.0]
     rotation: 0
     state: enabled
 - name: blocks_repack_bits_bb_0
@@ -206,7 +223,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [224, 220.0]
+    coordinate: [200, 220.0]
     rotation: 0
     state: enabled
 - name: epy_block_0_0
@@ -232,7 +249,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [840, 240.0]
+    coordinate: [784, 240.0]
     rotation: 0
     state: enabled
 - name: import_0_0
@@ -245,7 +262,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1200, 16.0]
+    coordinate: [1032, 16.0]
     rotation: 0
     state: true
 - name: import_1
@@ -258,7 +275,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1096, 16.0]
+    coordinate: [928, 16.0]
     rotation: 0
     state: true
 - name: interp_fir_filter_xxx_0
@@ -277,7 +294,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1008, 236.0]
+    coordinate: [928, 164.0]
     rotation: 0
     state: enabled
 - name: qtgui_freq_sink_x_0
@@ -358,10 +375,10 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1264, 148.0]
+    coordinate: [1128, 252.0]
     rotation: 0
     state: enabled
-- name: qtgui_time_sink_x_1_0
+- name: qtgui_time_sink_x_0_0
   id: qtgui_time_sink_x
   parameters:
     affinity: ''
@@ -378,7 +395,7 @@ blocks:
     alpha9: '1.0'
     autoscale: 'False'
     axislabels: 'True'
-    color1: green
+    color1: blue
     color10: dark blue
     color2: red
     color3: green
@@ -393,9 +410,9 @@ blocks:
     entags: 'True'
     grid: 'False'
     gui_hint: ''
-    label1: Parte R de la EC
+    label1: Signal 1
     label10: Signal 10
-    label2: Parte I de la EC
+    label2: Signal 2
     label3: Signal 3
     label4: Signal 4
     label5: Signal 5
@@ -404,9 +421,9 @@ blocks:
     label8: Signal 8
     label9: Signal 9
     legend: 'True'
-    marker1: '2'
+    marker1: '0'
     marker10: '-1'
-    marker2: '0'
+    marker2: '-1'
     marker3: '-1'
     marker4: '-1'
     marker5: '-1'
@@ -416,10 +433,10 @@ blocks:
     marker9: '-1'
     name: '""'
     nconnections: '1'
-    size: int(32*Sps/Nbps)
-    srate: samp_rate
-    stemplot: 'False'
-    style1: '2'
+    size: '1024'
+    srate: Rs
+    stemplot: 'True'
+    style1: '1'
     style10: '1'
     style2: '1'
     style3: '1'
@@ -435,11 +452,11 @@ blocks:
     tr_mode: qtgui.TRIG_MODE_FREE
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
-    type: complex
+    type: float
     update_time: '0.10'
-    width1: '3'
+    width1: '2'
     width10: '1'
-    width2: '3'
+    width2: '1'
     width3: '1'
     width4: '1'
     width5: '1'
@@ -447,7 +464,7 @@ blocks:
     width7: '1'
     width8: '1'
     width9: '1'
-    ylabel: Amplitude
+    ylabel: "se\xF1al aleatoria "
     ymax: '1'
     ymin: '-1'
     yunit: '""'
@@ -455,18 +472,19 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1032, 444.0]
+    coordinate: [400, 388.0]
     rotation: 0
     state: enabled
 
 connections:
 - [analog_const_source_x_1, '0', epy_block_0_0, '1']
+- [analog_random_source_x_0, '0', blocks_char_to_float_0_0_0_0, '0']
 - [analog_random_source_x_0, '0', blocks_repack_bits_bb_0, '0']
 - [blocks_char_to_float_0_0_0, '0', blocks_multiply_const_vxx_0, '0']
+- [blocks_char_to_float_0_0_0_0, '0', qtgui_time_sink_x_0_0, '0']
 - [blocks_multiply_const_vxx_0, '0', epy_block_0_0, '0']
 - [blocks_repack_bits_bb_0, '0', blocks_char_to_float_0_0_0, '0']
 - [epy_block_0_0, '0', interp_fir_filter_xxx_0, '0']
-- [epy_block_0_0, '0', qtgui_time_sink_x_1_0, '0']
 - [interp_fir_filter_xxx_0, '0', qtgui_freq_sink_x_0, '0']
 
 metadata:

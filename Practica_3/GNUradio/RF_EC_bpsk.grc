@@ -75,7 +75,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1090, 483]
+    coordinate: [688, 476.0]
     rotation: 0
     state: true
 - name: fd
@@ -96,7 +96,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1246, 483]
+    coordinate: [848, 476.0]
     rotation: 0
     state: true
 - name: h
@@ -128,7 +128,7 @@ blocks:
   parameters:
     alias: ''
     comment: ''
-    gui_hint: 4,0,1,2
+    gui_hint: 1,0,2,2
     label0: Message
     label1: RF Modulated. Time Domain
     label10: Tab 10
@@ -154,7 +154,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [457, 481]
+    coordinate: [488, 460.0]
     rotation: 0
     state: true
 - name: analog_const_source_x_0
@@ -311,7 +311,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1096, 216.0]
+    coordinate: [1096, 176.0]
     rotation: 0
     state: true
 - name: epy_block_0_0
@@ -482,7 +482,7 @@ blocks:
     style9: '0'
     tr_chan: '0'
     tr_level: '0.0'
-    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_mode: qtgui.TRIG_MODE_AUTO
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
     type: complex
@@ -586,7 +586,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [373, 768]
+    coordinate: [376, 788.0]
     rotation: 0
     state: true
 - name: qtgui_freq_sink_x_0_0
@@ -764,7 +764,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [268, 479]
+    coordinate: [280, 452.0]
     rotation: 0
     state: true
 - name: qtgui_time_sink_x_0_1
@@ -893,9 +893,9 @@ blocks:
     color9: dark green
     comment: ''
     ctrlpanel: 'False'
-    entags: 'True'
+    entags: 'False'
     grid: 'False'
-    gui_hint: Menu@1:2,1,1,1
+    gui_hint: Menu@1:1,1,1,1
     label1: Modulating Signal
     label10: Signal 10
     label2: RF Modulated signal
@@ -958,7 +958,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [375, 677]
+    coordinate: [368, 676.0]
     rotation: 0
     state: true
 - name: qtgui_time_sink_x_0_1_0_0
@@ -992,7 +992,7 @@ blocks:
     ctrlpanel: 'False'
     entags: 'True'
     grid: 'False'
-    gui_hint: Menu@1:3,1,1,1
+    gui_hint: Menu@1:0,1,1,1
     label1: I-Signal
     label10: Signal 10
     label2: Q-signal
@@ -1068,7 +1068,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [483, 282]
+    coordinate: [468.0, 280]
     rotation: 270
     state: true
 - name: virtual_sink_0_0_0
@@ -1081,7 +1081,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [748.0, 312]
+    coordinate: [740.0, 312]
     rotation: 270
     state: true
 - name: virtual_sink_0_0_0_0
@@ -1094,7 +1094,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1294, 320]
+    coordinate: [1292.0, 320]
     rotation: 270
     state: true
 - name: virtual_sink_0_0_0_0_0
@@ -1107,7 +1107,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1244, 339]
+    coordinate: [1244.0, 368]
     rotation: 270
     state: true
 - name: virtual_source_0_0
@@ -1120,7 +1120,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [9, 499]
+    coordinate: [16, 476.0]
     rotation: 0
     state: true
 - name: virtual_source_0_1
@@ -1146,7 +1146,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [5, 759]
+    coordinate: [40, 756.0]
     rotation: 0
     state: true
 - name: virtual_source_0_1_0_0

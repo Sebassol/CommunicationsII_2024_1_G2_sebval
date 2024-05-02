@@ -129,8 +129,8 @@ class ook(gr.top_block, Qt.QWidget):
         self.Menu_grid_layout_3 = Qt.QGridLayout()
         self.Menu_layout_3.addLayout(self.Menu_grid_layout_3)
         self.Menu.addTab(self.Menu_widget_3, 'Constellation')
-        self.top_grid_layout.addWidget(self.Menu, 4, 0, 1, 2)
-        for r in range(4, 5):
+        self.top_grid_layout.addWidget(self.Menu, 1, 0, 2, 2)
+        for r in range(1, 3):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 2):
             self.top_grid_layout.setColumnStretch(c, 1)
@@ -184,8 +184,8 @@ class ook(gr.top_block, Qt.QWidget):
             self.qtgui_time_sink_x_0_1_0_0.set_line_alpha(i, alphas[i])
 
         self._qtgui_time_sink_x_0_1_0_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0_1_0_0.qwidget(), Qt.QWidget)
-        self.Menu_grid_layout_1.addWidget(self._qtgui_time_sink_x_0_1_0_0_win, 3, 1, 1, 1)
-        for r in range(3, 4):
+        self.Menu_grid_layout_1.addWidget(self._qtgui_time_sink_x_0_1_0_0_win, 0, 1, 1, 1)
+        for r in range(0, 1):
             self.Menu_grid_layout_1.setRowStretch(r, 1)
         for c in range(1, 2):
             self.Menu_grid_layout_1.setColumnStretch(c, 1)
@@ -201,7 +201,7 @@ class ook(gr.top_block, Qt.QWidget):
 
         self.qtgui_time_sink_x_0_1_0.set_y_label('Amplitude', "")
 
-        self.qtgui_time_sink_x_0_1_0.enable_tags(True)
+        self.qtgui_time_sink_x_0_1_0.enable_tags(False)
         self.qtgui_time_sink_x_0_1_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, 0, "")
         self.qtgui_time_sink_x_0_1_0.enable_autoscale(False)
         self.qtgui_time_sink_x_0_1_0.enable_grid(False)
@@ -236,8 +236,8 @@ class ook(gr.top_block, Qt.QWidget):
             self.qtgui_time_sink_x_0_1_0.set_line_alpha(i, alphas[i])
 
         self._qtgui_time_sink_x_0_1_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0_1_0.qwidget(), Qt.QWidget)
-        self.Menu_grid_layout_1.addWidget(self._qtgui_time_sink_x_0_1_0_win, 2, 1, 1, 1)
-        for r in range(2, 3):
+        self.Menu_grid_layout_1.addWidget(self._qtgui_time_sink_x_0_1_0_win, 1, 1, 1, 1)
+        for r in range(1, 2):
             self.Menu_grid_layout_1.setRowStretch(r, 1)
         for c in range(1, 2):
             self.Menu_grid_layout_1.setColumnStretch(c, 1)
@@ -447,7 +447,7 @@ class ook(gr.top_block, Qt.QWidget):
         self.qtgui_const_sink_x_0.set_update_time(0.10)
         self.qtgui_const_sink_x_0.set_y_axis(-2, 2)
         self.qtgui_const_sink_x_0.set_x_axis(-2, 2)
-        self.qtgui_const_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, "")
+        self.qtgui_const_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_AUTO, qtgui.TRIG_SLOPE_POS, 0.0, 0, "")
         self.qtgui_const_sink_x_0.enable_autoscale(False)
         self.qtgui_const_sink_x_0.enable_grid(False)
         self.qtgui_const_sink_x_0.enable_axis_labels(True)
